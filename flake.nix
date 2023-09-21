@@ -56,9 +56,7 @@
             # speed up
             boot.kernelPackages = pkgsGnu.linuxPackages;
             services.qemuGuest.enable = lib.mkForce false;
-            virtualisation.vmVariant = {
-              virtualisation.host.pkgs = pkgsGnu;
-            };
+            virtualisation.vmVariant = { virtualisation.host.pkgs = pkgsGnu; };
 
             # fixes
             i18n.glibcLocales = pkgs.stdenv.mkDerivation {
